@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TRADVG</title>
     <style>
-      text-align: center;
+      * {
+        /* padding: 0;
+        margin: 0; */
+      }
       h1,
       h2 {
         text-align: center;
@@ -77,6 +80,44 @@
         </li>
         <li>End point of uptrending line is the selling signal</li>
       </ul>
+      <h3>Moving Average Strategy</h3>
+      <ul type="circle">
+        <li>Applicable only in V40 companies</li>
+        <li>Invest 3% of your portfolio in one trade</li>
+        <li>There is no stop loss</li>
+        <li>Use daily Candlestick chart</li>
+      </ul>
+      <p>use simple moving average</p>
+
+      <pre>
+        use SMA(50,100,200) indicator
+        200 days moving avg (color:black)
+        50 days moving avg  (color:red)
+        20 days moving avg  (color:green)
+        Style color: blue
+      </pre>
+      <p>Steps in moving avg strategy</p>
+      <pre>
+<strong>Buying point</strong>-> 200 moving avg  [Black line (top)]
+                           |
+                50 moving avg  [Red line]
+                           |
+                20 moving avg  [Green line]
+                           |
+                Closing price  [red/green candle(bottom)] <strong>buy point</strong>
+                      <br>
+      Check after market close and buy next day morning
+      <br>
+<strong>Selling point</strong>-> Closing price  [red/green candle(top)] <strong>  sell point</strong>
+                             |
+                  20 moving avg  [Green line]
+                             |
+                  50 moving avg  [Red line]
+                             |
+                  200 moving avg [Black line (bottom)]
+                      <br>
+      Check after market close and sell next day morning
+    </pre>
     </div>
   </body>
 </html>
